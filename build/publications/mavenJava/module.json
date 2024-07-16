@@ -1,0 +1,96 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "app.ccls.yml",
+    "module": "yamlapi",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "yamlapi-1.0.0.jar",
+          "url": "yamlapi-1.0.0.jar",
+          "size": 109843,
+          "sha512": "8f77d1dbe1ba6108b5b90589f250ef0b720a70eddf250690d0eccf939fb87454872e35967b180c3f53b952f28ab445d13d84849097e15294a7cab3aeb030bf3c",
+          "sha256": "4c94774b3616f3bfcd70b3777ca6061c692b4a99863ac71e25b66ae6a451337f",
+          "sha1": "131bd8204069eeee21d3fc564c5815764482334f",
+          "md5": "d3c454d67f0e5e0838fc497d44a67dbc"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.15.11"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.100.7+1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "yamlapi-1.0.0.jar",
+          "url": "yamlapi-1.0.0.jar",
+          "size": 109843,
+          "sha512": "8f77d1dbe1ba6108b5b90589f250ef0b720a70eddf250690d0eccf939fb87454872e35967b180c3f53b952f28ab445d13d84849097e15294a7cab3aeb030bf3c",
+          "sha256": "4c94774b3616f3bfcd70b3777ca6061c692b4a99863ac71e25b66ae6a451337f",
+          "sha1": "131bd8204069eeee21d3fc564c5815764482334f",
+          "md5": "d3c454d67f0e5e0838fc497d44a67dbc"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "yamlapi-1.0.0-sources.jar",
+          "url": "yamlapi-1.0.0-sources.jar",
+          "size": 109021,
+          "sha512": "6179277ff0adbf7ef84a7f58bfc7e8631a594cd020043eb741b5379d4ec80856a178e533cc73d787271e984e2afc9aac44cf1c1501b793c1535d2fcc85d6d9e7",
+          "sha256": "1cc6b6d88b84714bc2010630b6ca09239c67171c578c07ad3b3f30ed33f50fe2",
+          "sha1": "02ce128d9c56d3a2e9819cdd387616a3cdf02407",
+          "md5": "567721ae2f31ab5ca3fe9171fdd07df5"
+        }
+      ]
+    }
+  ]
+}
