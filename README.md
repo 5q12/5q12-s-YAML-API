@@ -15,9 +15,6 @@
 ```java
 import main.java.app.ccls.yml.YamlHandler;
 import main.java.app.ccls.yml.YamlHandlerFactory;
-import java.util.Map;
-
-Map<String, Object> data = YamlReader.readYaml("path/to/file.yml");
 ```
 
 ### Simple Key-Value Storage
@@ -30,8 +27,8 @@ import java.util.Map;
 
 public class SimpleKeyValueExample {
     public static void main(String[] args) {
-        // Initialize YamlHandler with the "advanced" format
-        YamlHandler yamlHandler = YamlHandlerFactory.getHandler("advanced");
+        // Initialize YamlHandler with the "nested" format
+        YamlHandler yamlHandler = YamlHandlerFactory.getHandler("nested");
 
         // Define a file path
         String filePath = "config/simple_data.yml";
@@ -65,8 +62,8 @@ import java.util.Map;
 
 public class NestedStructureExample {
     public static void main(String[] args) {
-        // Initialize YamlHandler with the "advanced" format
-        YamlHandler yamlHandler = YamlHandlerFactory.getHandler("advanced");
+        // Initialize YamlHandler with the "nested" format
+        YamlHandler yamlHandler = YamlHandlerFactory.getHandler("nested");
 
         // Define a file path
         String filePath = "config/nested_data.yml";
@@ -106,8 +103,8 @@ import java.util.Map;
 
 public class ListExample {
     public static void main(String[] args) {
-        // Initialize YamlHandler with the "advanced" format
-        YamlHandler yamlHandler = YamlHandlerFactory.getHandler("advanced");
+        // Initialize YamlHandler with the "nested" format
+        YamlHandler yamlHandler = YamlHandlerFactory.getHandler("nested");
 
         // Define a file path
         String filePath = "config/list_data.yml";
@@ -141,6 +138,6 @@ public class ListExample {
 ### Add to dependencies
 ```
 dependencies {
-    modImplementation 'app.ccls.yml:yamlapi:1.0.0'
+    modImplementation 'app.ccls.yml:yamlapi:{version}'
 }
 ```
