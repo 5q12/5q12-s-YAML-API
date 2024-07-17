@@ -1,11 +1,32 @@
 package main.java.app.ccls.yml;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class NestedYamlHandler implements YamlHandler {
 
     private static final String INDENT = "  ";
+    private static final String LOG_FILE_PATH = "config/yaml/logs/nested.log";
+
+    static {
+        try {
+            Files.createDirectories(Paths.get("config/yaml/logs"));
+            new PrintWriter(LOG_FILE_PATH).close(); // Clear the log file on startup
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void log(String message) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(LOG_FILE_PATH, true))) {
+            writer.write(message);
+            writer.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public Map<String, Object> readYaml(String path) throws IOException {
@@ -21,10 +42,12 @@ public class NestedYamlHandler implements YamlHandler {
                 }
                 int indentLevel = countLeadingSpaces(line) / INDENT.length();
                 String trimmedLine = line.trim();
+                log("Reading line: " + line);
                 if (trimmedLine.contains(":")) {
                     String[] parts = trimmedLine.split(":", 2);
                     String key = parts[0].trim();
-                    Object value = parts.length > 1 ? parseValue(parts[1].trim()) : new LinkedHashMap<>();
+                    Object value = parts.length > 1 && !parts[1].trim().isEmpty() ? parseValue(parts[1].trim()) : new LinkedHashMap<>();
+                    log("Parsed key: " + key + ", value: " + value);
                     while (indentLevel < currentIndentLevel) {
                         stack.pop();
                         currentIndentLevel--;
@@ -38,6 +61,7 @@ public class NestedYamlHandler implements YamlHandler {
                 }
             }
         }
+        log("Final parsed data: " + data);
         return data;
     }
 

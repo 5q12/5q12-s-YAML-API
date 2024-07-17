@@ -6,8 +6,6 @@ public class YamlHandlerFactory {
         switch (format) {
             case "basic":
                 return new BasicYamlHandler();
-            case "advanced":
-                return new AdvancedYamlHandler();
             case "nested":
                 return new NestedYamlHandler();
             default:
