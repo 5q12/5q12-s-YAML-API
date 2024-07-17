@@ -3,7 +3,7 @@
   "component": {
     "group": "app.ccls.yml",
     "module": "yamlapi",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -25,13 +25,13 @@
       },
       "files": [
         {
-          "name": "yamlapi-1.1.0.jar",
-          "url": "yamlapi-1.1.0.jar",
-          "size": 118466,
-          "sha512": "904f1668c0090d10ad8ef4f669826d313475f8b8024e0078c918b0d586312e1a716cc3380785418c1a252c201afc2ac812fc5e62b75a46e6ffc0c690fd77ef25",
-          "sha256": "de9ea88495f8b9bd0b32596956b233485dd688d8bd95718143072b7bbca11fa8",
-          "sha1": "359949ba15e98f6cc05f19650c13dfca876ed3dd",
-          "md5": "b984cfd86483e451a548e8b971755a5e"
+          "name": "yamlapi-1.1.1.jar",
+          "url": "yamlapi-1.1.1.jar",
+          "size": 115086,
+          "sha512": "28fc4fd313284a3113e955e8e11a354cb40110e3c080effeb01be62363dd4bd66ed1e9f4525d39e5073910e41bf2596e53b526cf549dc43b663bd099f1c2acc7",
+          "sha256": "5eaa350293f05b3cad8f8995b5e8fced47b34acfa2fabbfa1593a005acaa409f",
+          "sha1": "8c7a2aac9fc2c1b503745b653430629d46fe698a",
+          "md5": "c6be077de83fd7a107a07051fc9d9854"
         }
       ]
     },
@@ -62,13 +62,13 @@
       ],
       "files": [
         {
-          "name": "yamlapi-1.1.0.jar",
-          "url": "yamlapi-1.1.0.jar",
-          "size": 118466,
-          "sha512": "904f1668c0090d10ad8ef4f669826d313475f8b8024e0078c918b0d586312e1a716cc3380785418c1a252c201afc2ac812fc5e62b75a46e6ffc0c690fd77ef25",
-          "sha256": "de9ea88495f8b9bd0b32596956b233485dd688d8bd95718143072b7bbca11fa8",
-          "sha1": "359949ba15e98f6cc05f19650c13dfca876ed3dd",
-          "md5": "b984cfd86483e451a548e8b971755a5e"
+          "name": "yamlapi-1.1.1.jar",
+          "url": "yamlapi-1.1.1.jar",
+          "size": 115086,
+          "sha512": "28fc4fd313284a3113e955e8e11a354cb40110e3c080effeb01be62363dd4bd66ed1e9f4525d39e5073910e41bf2596e53b526cf549dc43b663bd099f1c2acc7",
+          "sha256": "5eaa350293f05b3cad8f8995b5e8fced47b34acfa2fabbfa1593a005acaa409f",
+          "sha1": "8c7a2aac9fc2c1b503745b653430629d46fe698a",
+          "md5": "c6be077de83fd7a107a07051fc9d9854"
         }
       ]
     },
@@ -82,13 +82,13 @@
       },
       "files": [
         {
-          "name": "yamlapi-1.1.0-sources.jar",
-          "url": "yamlapi-1.1.0-sources.jar",
-          "size": 112895,
-          "sha512": "dec85f9a21479c8e7e04a38b35b1ad4d49cdee10254fef638ac50c00068dd3fa1bd853eaa57e7f24aa3d936d675009d10011b1b8d1f389335f0cb49635280d09",
-          "sha256": "fd52956bd53b214137e9f211c0bf4041a70aabca5e5cd7e45d6172c2a17572ce",
-          "sha1": "6cf3f75c3c0c575be34f975196886006a43b405d",
-          "md5": "c00e85da981ccf5d269b445caf88492c"
+          "name": "yamlapi-1.1.1-sources.jar",
+          "url": "yamlapi-1.1.1-sources.jar",
+          "size": 111466,
+          "sha512": "ab9eab606a944253c1b8823051f1ce2f62984018698507b5776d7bb78a948e2a2f98931c0fc6ae7f4c83f790ae07aab3540291c6fe85b1b4f834a5c59105cd3a",
+          "sha256": "1bbd7fa11bd0d0b5583d2202929cd55a85c3ad963b847df84a9c0a05db254225",
+          "sha1": "f955f529232158fa83e1315630a4c20f3a25b4b4",
+          "md5": "3cd6c9dcc638b9aed93df52a1f104fb0"
         }
       ]
     }
