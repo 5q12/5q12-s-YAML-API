@@ -8,19 +8,35 @@
 - **Write YAML Files**: Serialize Java objects into YAML format.
 - **Integration**: Designed specifically for use with Fabric, ensuring compatibility and performance.
 
-## Usage
+## Example Usage
 
+### Add to repositories
+```
+repositories {
+    maven {
+        url = uri("https://yml.ccls.app/v1.1.2")
+    }
+    mavenCentral()
+}
+```
+
+### Add to dependencies
+```
+dependencies {
+    modImplementation 'app.ccls.yml:yamlapi:1.1.2'
+}
+```
 
 ### Imports 
 ```java
-import main.java.app.ccls.yml.YamlHandler;
-import main.java.app.ccls.yml.YamlHandlerFactory;
+import app.ccls.yml.YamlHandler;
+import app.ccls.yml.YamlHandlerFactory;
 ```
 
 ### Simple Key-Value Storage
 ```java
-import main.java.app.ccls.yml.YamlHandler;
-import main.java.app.ccls.yml.YamlHandlerFactory;
+import app.ccls.yml.YamlHandler;
+import app.ccls.yml.YamlHandlerFactory;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -54,8 +70,8 @@ public class SimpleKeyValueExample {
 ```
 ### Nested Structures
 ```java
-import main.java.app.ccls.yml.YamlHandler;
-import main.java.app.ccls.yml.YamlHandlerFactory;
+import app.ccls.yml.YamlHandler;
+import app.ccls.yml.YamlHandlerFactory;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -93,8 +109,8 @@ public class NestedStructureExample {
 
 ### Lists in YAML
 ```java
-import main.java.app.ccls.yml.YamlHandler;
-import main.java.app.ccls.yml.YamlHandlerFactory;
+import app.ccls.yml.YamlHandler;
+import app.ccls.yml.YamlHandlerFactory;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -132,12 +148,5 @@ public class ListExample {
             e.printStackTrace();
         }
     }
-}
-```
-
-### Add to dependencies
-```
-dependencies {
-    modImplementation 'app.ccls.yml:yamlapi:{version}'
 }
 ```
