@@ -15,7 +15,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-      		"main.java.app.ccls.yml.YamlApiMain"
+      		"app.ccls.yml.YamlApiMain"
 		]
 	},
 	"mixins": [
