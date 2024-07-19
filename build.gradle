@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-version = '1.1.1'
+version = '1.1.2'
 group = 'app.ccls.yml'
 
 base {
@@ -43,12 +43,40 @@ java {
 publishing {
     publications {
         create("mavenJava", MavenPublication) {
-            artifactId = project.archives_base_name
+            artifactId = project.archivesBaseName
             from components.java
+
+            pom {
+                name = 'YAML API'
+                description = 'A simple API for reading and writing YAML files'
+                url = 'https://github.com/5q12/5q12-s-YAML-API'
+                
+                licenses {
+                    license {
+                        name = 'The MIT License'
+                        url = 'https://opensource.org/licenses/MIT'
+                    }
+                }
+                developers {
+                    developer {
+                        id = '5q12'
+                        name = '5q12'
+                        email = 'ccls.5q12@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/5q12/5q12-s-YAML-API.git'
+                    developerConnection = 'scm:git:ssh://github.com/5q12/5q12-s-YAML-API.git'
+                    url = 'https://github.com/5q12/5q12-s-YAML-API.git'
+                }
+            }
         }
     }
 
     repositories {
-        mavenLocal()
+        maven {
+            name = 'localRepo'
+            url = uri("${rootProject.buildDir}/repo")
+        }
     }
 }
