@@ -13,7 +13,7 @@ public class NestedYamlHandler implements YamlHandler {
     static {
         try {
             Files.createDirectories(Paths.get("config/yaml/logs"));
-            new PrintWriter(LOG_FILE_PATH).close(); // Clear the log file on startup
+            new PrintWriter(LOG_FILE_PATH).close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -37,8 +37,9 @@ public class NestedYamlHandler implements YamlHandler {
             stack.push(data);
             int currentIndentLevel = 0;
             while ((line = reader.readLine()) != null) {
+                line = removeComment(line);
                 if (line.trim().isEmpty()) {
-                    continue;  // skip empty lines
+                    continue;
                 }
                 int indentLevel = countLeadingSpaces(line) / INDENT.length();
                 String trimmedLine = line.trim();
@@ -133,7 +134,7 @@ public class NestedYamlHandler implements YamlHandler {
 
     private Map<String, Object> parseInlineMap(String value) {
         Map<String, Object> map = new LinkedHashMap<>();
-        value = value.substring(1, value.length() - 1); // Remove the curly braces
+        value = value.substring(1, value.length() - 1);
         String[] entries = value.split(", ");
         for (String entry : entries) {
             String[] parts = entry.split("=");
@@ -144,7 +145,7 @@ public class NestedYamlHandler implements YamlHandler {
 
     private List<Object> parseInlineList(String value) {
         List<Object> list = new ArrayList<>();
-        value = value.substring(1, value.length() - 1); // Remove the square brackets
+        value = value.substring(1, value.length() - 1);
         String[] items = value.split(", ");
         for (String item : items) {
             list.add(parseValue(item.trim()));
@@ -166,5 +167,27 @@ public class NestedYamlHandler implements YamlHandler {
             sb.append(INDENT);
         }
         return sb.toString();
+    }
+
+    private String removeComment(String line) {
+        boolean inQuote = false;
+        char quoteChar = '\0';
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < line.length(); i++) {
+            char c = line.charAt(i);
+            if (c == '"' || c == '\'') {
+                if (inQuote && c == quoteChar) {
+                    inQuote = false;
+                } else if (!inQuote) {
+                    inQuote = true;
+                    quoteChar = c;
+                }
+            }
+            if (c == '#' && !inQuote) {
+                break;
+            }
+            result.append(c);
+        }
+        return result.toString();
     }
 }
