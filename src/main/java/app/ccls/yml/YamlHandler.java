@@ -1,4 +1,4 @@
-package main.java.app.ccls.yml;
+package app.ccls.yml;
 
 import java.io.IOException;
 import java.util.Map;
