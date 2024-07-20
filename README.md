@@ -14,7 +14,7 @@
 ```
 repositories {
     maven {
-        url = uri("https://yml.ccls.app/v1.1.2")
+        url = uri("https://yml.ccls.app/v1.1.3")
     }
     mavenCentral()
 }
@@ -23,7 +23,7 @@ repositories {
 ### Add to dependencies
 ```
 dependencies {
-    modImplementation 'app.ccls.yml:yamlapi:1.1.2'
+    modImplementation 'app.ccls.yml:yamlapi:1.1.3'
 }
 ```
 
